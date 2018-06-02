@@ -20,72 +20,72 @@ msgstr ""
 
 #: condapp/models.py:13
 msgid "Apartment type"
-msgstr ""
+msgstr "Tipo de departamento"
 
 #: condapp/models.py:14
 msgid "Apartment types"
-msgstr ""
+msgstr "Tipos de departamento"
 
 #: condapp/models.py:18
 msgid "number"
-msgstr ""
+msgstr "número"
 
 #: condapp/models.py:20
 msgid "Apartment number"
-msgstr ""
+msgstr "número"
 
 #: condapp/models.py:22
 msgid "Type of apartment"
-msgstr ""
+msgstr "Tipo de departamento"
 
 #: condapp/models.py:26
 msgid "Apartment"
-msgstr ""
+msgstr "Departamento"
 
 #: condapp/models.py:27
 msgid "Apartments"
-msgstr ""
+msgstr "Departamentos"
 
 #: condapp/models.py:30
 msgid "apartment"
-msgstr ""
+msgstr "departamento"
 
 #: condapp/models.py:34
 msgid "phone number"
-msgstr ""
+msgstr "número telefónico"
 
 #: condapp/models.py:37
 msgid "owner"
-msgstr ""
+msgstr "dueño"
 
 #: condapp/models.py:39
 msgid "user"
-msgstr ""
+msgstr "usuario"
 
 #: condapp/models.py:47
 msgid "name"
-msgstr ""
+msgstr "nombre"
 
 #: condapp/models.py:49
 msgid "description"
-msgstr ""
+msgstr "descripción"
 
 #: condapp/models.py:51
 msgid "author"
-msgstr ""
+msgstr "autor"
 
 #: condapp/models.py:53
 msgid "budget"
-msgstr ""
+msgstr "presupuesto"
 
 #: condapp/models.py:56
 msgid "creation date"
-msgstr ""
+msgstr "frecha de creación"
 
 #: condapp/models.py:58
 msgid "due date"
-msgstr ""
+msgstr "fecha de entrega"
 
 #: condapp/models.py:59 condapp/models.py:63
 msgid "delivered"
-msgstr ""
+msgstr "entregado"
