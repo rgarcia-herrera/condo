@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-02 18:46+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: condapp/models.py:13
+msgid "Apartment type"
+msgstr ""
+
+#: condapp/models.py:14
+msgid "Apartment types"
+msgstr ""
+
+#: condapp/models.py:18
+msgid "number"
+msgstr ""
+
+#: condapp/models.py:20
+msgid "Apartment number"
+msgstr ""
+
+#: condapp/models.py:22
+msgid "Type of apartment"
+msgstr ""
+
+#: condapp/models.py:26
+msgid "Apartment"
+msgstr ""
+
+#: condapp/models.py:27
+msgid "Apartments"
+msgstr ""
+
+#: condapp/models.py:30
+msgid "apartment"
+msgstr ""
+
+#: condapp/models.py:34
+msgid "phone number"
+msgstr ""
+
+#: condapp/models.py:37
+msgid "owner"
+msgstr ""
+
+#: condapp/models.py:39
+msgid "user"
+msgstr ""
+
+#: condapp/models.py:47
+msgid "name"
+msgstr ""
+
+#: condapp/models.py:49
+msgid "description"
+msgstr ""
+
+#: condapp/models.py:51
+msgid "author"
+msgstr ""
+
+#: condapp/models.py:53
+msgid "budget"
+msgstr ""
+
+#: condapp/models.py:56
+msgid "creation date"
+msgstr ""
+
+#: condapp/models.py:58
+msgid "due date"
+msgstr ""
+
+#: condapp/models.py:59 condapp/models.py:63
+msgid "delivered"
+msgstr ""
