@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-02 18:46+0000\n"
+"POT-Creation-Date: 2018-06-02 22:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,10 +45,6 @@ msgstr "Departamento"
 #: condapp/models.py:27
 msgid "Apartments"
 msgstr "Departamentos"
-
-#: condapp/models.py:30
-msgid "apartment"
-msgstr "departamento"
 
 #: condapp/models.py:34
 msgid "phone number"
@@ -89,3 +85,14 @@ msgstr "fecha de entrega"
 #: condapp/models.py:59 condapp/models.py:63
 msgid "delivered"
 msgstr "entregado"
+
+#: condapp/models.py:95
+msgid "Fee"
+msgstr "Cuota"
+
+#: condapp/models.py:96
+msgid "Fees"
+msgstr "Cuotas"
+
+#~ msgid "apartment"
+#~ msgstr "departamento"
