@@ -27,7 +27,7 @@ class Unit(models.Model):
         verbose_name_plural = _('Apartments')
 
     def __str__(self):
-        return "%s %s" % (self.apt_type, self.number)
+        return "%s %s" % (self.unit_type, self.number)
 
 
 class Profile(models.Model):
@@ -105,6 +105,28 @@ class Volunteer(models.Model):
         verbose_name_plural = _('Voluntarios')
 
 
+class RecurrentFee(models.Model):
+    name = models.CharField(max_length=200)
+    ammount = models.DecimalField(max_digits=19, decimal_places=2)
+    unit_type = models.ForeignKey(UnitType,
+                                  help_text=_('unit type to apply recurrent fee'),
+                                  on_delete=models.CASCADE)
+    weekdays = models.CharField(max_length=200)
+    monthdays = models.CharField(max_length=200)
+    months = models.CharField(max_length=200)
+
+    class Meta:
+        verbose_name = _('Fee')
+        verbose_name_plural = _('Fees')
+
+    def get_status(self):
+        return "pendiente"
+
+    def __str__(self):
+        return "%s %s %s %s" % (self.name, self.ammount,
+                                self.apartment, self.due_date)
+
+
 class Fee(models.Model):
     name = models.CharField(max_length=200)
     ammount = models.DecimalField(max_digits=19, decimal_places=2)
@@ -123,7 +145,7 @@ class Fee(models.Model):
                                 self.apartment, self.due_date)
 
 
-class Payment(models.Model):
+class Deposit(models.Model):
     fee = models.ForeignKey(Fee, on_delete=models.CASCADE)
     date = models.DateField(auto_now=True)
     ammount = models.DecimalField(max_digits=19, decimal_places=2)
@@ -133,5 +155,55 @@ class Payment(models.Model):
         return "%s %s %s %s" % (self.date, self.fee, self.ammount, self.user)
 
     class Meta:
-        verbose_name = _('Pago')
-        verbose_name_plural = _('Pagos')
+        verbose_name = _('Payment')
+        verbose_name_plural = _('Payments')
+
+
+class Withdrawal(models.Model):
+    date = models.DateField(auto_now=True)
+    ammount = models.DecimalField(max_digits=19, decimal_places=2)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    attachment = models.FileField(null=True, blank=True)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+
+
+class RotatingPosition(models.Model):
+    name = models.CharField(_('name'), max_length=200)
+    description = models.TextField(_('description'))
+    weekdays = models.CharField(max_length=200)
+    monthdays = models.CharField(max_length=200)
+    months = models.CharField(max_length=200)
+    units = models.ManyToManyField(Unit)
+
+    def create_position(self):
+        """
+        If now() matches monthdays, weekdays and months
+        create entry in Position table with name and description.
+        
+        User is selected among profiles associated to units, by
+        rotation. Uses rotation_id to tell who goes next.
+        """
+        pass
+
+
+class Position(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateField(auto_now=True)
+    name = models.CharField(max_length=200)
+    description = models.TextField(_('description'))
+    rotation = models.ForeignKey(RotatingPosition, null=True, blank=True)
+    
+
+
+class Announcements(models.Model):
+    user = models.ForeignKey(User, default=creator, null=True)
+    date = models.DateField(auto_now=True)
+    title = models.CharField(max_length=200)
+    text = models.TextField(_('description'))
+
+    def creator(self):
+        """
+        try to get user from session?
+        or None if an auto-created announcement
+        """
+    
