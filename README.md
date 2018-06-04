@@ -14,9 +14,7 @@ https://django-contrib-comments.readthedocs.io/en/latest/index.html
 
 https://docs.djangoproject.com/en/2.0/topics/i18n/translation/
 
-
-
-
+https://simpleisbetterthancomplex.com/tutorial/2016/11/23/how-to-add-user-profile-to-django-admin.html
 
 # unos urls
 
